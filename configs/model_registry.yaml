@@ -1,0 +1,128 @@
+{
+  "models": [
+    {
+      "model_id": "gpt-5.2",
+      "provider": "openai_compatible",
+      "api_base": "",
+      "api_key_env": "GMN_API_KEY",
+      "api_model": "gpt-5.2",
+      "enabled": true,
+      "role": "candidate",
+      "max_tokens": 512,
+      "temperature": 0.0
+    },
+    {
+      "model_id": "gemini-3-flash",
+      "provider": "openai_compatible",
+      "api_base": "",
+      "api_key_env": "NEWAPI_API_KEY",
+      "api_model": "gemini-3-flash-preview",
+      "enabled": true,
+      "role": "candidate",
+      "max_tokens": 512,
+      "temperature": 0.0
+    },
+    {
+      "model_id": "claude-4.6-sonnet-medium",
+      "provider": "openai_compatible",
+      "api_base": "",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "api_model": "anthropic/claude-4.6-sonnet-medium",
+      "enabled": false,
+      "role": "candidate",
+      "max_tokens": 512,
+      "temperature": 0.0
+    },
+    {
+      "model_id": "DeepSeek-V3.2",
+      "provider": "openai_compatible",
+      "api_base": "",
+      "api_key_env": "SILICONFLOW_API_KEY",
+      "api_model": "deepseek-ai/DeepSeek-V3.2",
+      "enabled": true,
+      "role": "candidate",
+      "max_tokens": 512,
+      "temperature": 0.0
+    },
+    {
+      "model_id": "Qwen3-VL-32B-Instruct",
+      "provider": "openai_compatible",
+      "api_base": "",
+      "api_key_env": "SILICONFLOW_API_KEY",
+      "api_model": "Qwen/Qwen3-VL-32B-Instruct",
+      "enabled": false,
+      "role": "candidate",
+      "max_tokens": 512,
+      "temperature": 0.0
+    },
+    {
+      "model_id": "Qwen3-235B-A22B-Instruct-2507",
+      "provider": "openai_compatible",
+      "api_base": "",
+      "api_key_env": "SILICONFLOW_API_KEY",
+      "api_model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "enabled": true,
+      "role": "candidate",
+      "max_tokens": 512,
+      "temperature": 0.0
+    },
+    {
+      "model_id": "Kimi-K2.5-Pro",
+      "provider": "openai_compatible",
+      "api_base": "",
+      "api_key_env": "SILICONFLOW_API_KEY",
+      "api_model": "Pro/moonshotai/Kimi-K2.5",
+      "enabled": false,
+      "role": "candidate",
+      "max_tokens": 512,
+      "temperature": 0.0
+    },
+    {
+      "model_id": "GLM-5-Pro",
+      "provider": "openai_compatible",
+      "api_base": "",
+      "api_key_env": "SILICONFLOW_API_KEY",
+      "api_model": "Pro/zai-org/GLM-5",
+      "enabled": false,
+      "role": "candidate",
+      "max_tokens": 512,
+      "temperature": 0.0
+    },
+    {
+      "model_id": "GLM-4.6",
+      "provider": "openai_compatible",
+      "api_base": "",
+      "api_key_env": "SILICONFLOW_API_KEY",
+      "api_model": "zai-org/GLM-4.6",
+      "enabled": true,
+      "role": "candidate",
+      "max_tokens": 512,
+      "temperature": 0.0
+    },
+    {
+      "model_id": "gpt5.3-xhigh",
+      "provider": "openai_compatible",
+      "api_base": "",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "api_model": "openai/gpt-5.3-xhigh",
+      "enabled": false,
+      "role": "judge",
+      "max_tokens": 512,
+      "temperature": 0.0
+    },
+    {
+      "model_id": "claude-4.6-opus",
+      "provider": "openai_compatible",
+      "api_base": "",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "api_model": "anthropic/claude-4.6-opus",
+      "enabled": false,
+      "role": "judge",
+      "max_tokens": 512,
+      "temperature": 0.0
+    }
+  ],
+  "pilot_model_ids": [
+    "gpt-5.2"
+  ]
+}

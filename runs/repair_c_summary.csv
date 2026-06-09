@@ -1,0 +1,10 @@
+repair_mode,subtype_id,mean_delta_pp,models_with_B,total_models,C_flag
+none,full_half_width,1.4583,0,5,0
+none,ocr_confusable,65.2603,5,5,1
+none,simp_trad,55.2264,5,5,1
+script_numeric,full_half_width,1.4583,0,5,0
+script_numeric,ocr_confusable,45.6388,5,5,1
+script_numeric,simp_trad,1.9746,0,5,0
+field_aware,full_half_width,0.0000,0,5,0
+field_aware,ocr_confusable,2.9167,0,5,0
+field_aware,simp_trad,0.0000,0,5,0

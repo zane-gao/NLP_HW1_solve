@@ -1,0 +1,5 @@
+condition,simp_trad,ocr_confusable,full_half_width
+baseline,55.2264,65.2603,1.4583
+operator_only,1.9746,45.6388,1.4583
+sccp_strict,0.0,14.36,0.83
+sccp_oracle,0.0,2.9167,0.0

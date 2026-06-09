@@ -1,0 +1,22 @@
+{
+  "user_prompt": "publication-quality scientific flowchart, white background, horizontal pipeline layout, Chinese NLP robustness dataset construction workflow, source templates and scenario slots, control and perturbed pairing, calibration gate for semantic preservation and parse quality, Focus3 main set, five models times four prompt templates evaluation, scoring summary layer analysis and flip analysis, clean academic schematic, vector style, subtle blue orange accents, high contrast, minimal labels, publication ready, no prompt text\n\nHard constraints:\n- white background\n- publication-quality composition\n- keep labels minimal\n- do not include any text showing the prompt, instructions, metadata, layout descriptions, or style directives\n- avoid: watermark, photorealistic, 3d, cluttered background, dense paragraphs, layout instruction text, prompt leakage, low resolution, decorative arrows, unrelated charts",
+  "doc_type": "conference",
+  "quality_threshold": 8.0,
+  "iterations": [
+    {
+      "iteration": 1,
+      "success": false,
+      "error": "API request failed: HTTPSConnectionPool(host='new.12ai.org', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
+    },
+    {
+      "iteration": 2,
+      "success": false,
+      "error": "API request failed: HTTPSConnectionPool(host='new.12ai.org', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
+    }
+  ],
+  "final_image": null,
+  "final_score": 0.0,
+  "success": false,
+  "early_stop": false,
+  "early_stop_reason": null
+}

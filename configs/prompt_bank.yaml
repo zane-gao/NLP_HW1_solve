@@ -1,0 +1,48 @@
+{
+  "prompts": [
+    {
+      "prompt_id": "P1",
+      "system_prompt": "你是严谨的中文语言处理评测助手。你必须遵守输出格式，不要输出解释。",
+      "user_template": "任务类型：{task_type}\n任务说明：{task_instruction}\n输入文本：\n{input_text}\n输出要求：\n{output_schema}\n请只输出一个 JSON 对象。"
+    },
+    {
+      "prompt_id": "P2",
+      "system_prompt": "你是严格 JSON 引擎。任何情况下都只返回 JSON 对象，不允许多余文本。",
+      "user_template": "请完成任务并严格返回 JSON。\n任务类型：{task_type}\n任务说明：{task_instruction}\n输入：\n{input_text}\nJSON Schema（示意）：\n{output_schema}"
+    },
+    {
+      "prompt_id": "P3",
+      "system_prompt": "你是信息抽取与语义判断专家。请先参照示例，再按同样格式输出。",
+      "user_template": "示例：\n{few_shot}\n\n现在请处理新输入。\n任务类型：{task_type}\n任务说明：{task_instruction}\n输入：\n{input_text}\n输出格式：\n{output_schema}\n仅输出 JSON。"
+    },
+    {
+      "prompt_id": "P4",
+      "system_prompt": "你是稳定鲁棒的文本理解助手。输入表面形式可能变化，但语义目标不变。必须返回 JSON。",
+      "user_template": "请基于输入完成指定任务。\n任务：{task_type}\n要求：{task_instruction}\n待处理内容：\n{input_text}\n返回格式：\n{output_schema}\n不要解释。"
+    }
+  ],
+  "task_instruction": {
+    "extraction": "抽取 company、date、amount 三个字段。date 统一为 YYYY-MM-DD；amount 保留原单位（如“1200万元”）。",
+    "classification": "判断“断言”是否被“文本”支持。只允许输出“支持”或“不支持”。"
+  },
+  "output_schema": {
+    "extraction": {
+      "company": "字符串",
+      "date": "YYYY-MM-DD",
+      "amount": "字符串"
+    },
+    "classification": {
+      "label": "支持|不支持"
+    }
+  },
+  "pilot_prompt_ids": [
+    "P1",
+    "P2"
+  ],
+  "main_prompt_ids": [
+    "P1",
+    "P2",
+    "P3",
+    "P4"
+  ]
+}

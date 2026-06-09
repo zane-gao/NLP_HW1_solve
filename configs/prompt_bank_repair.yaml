@@ -1,0 +1,40 @@
+{
+  "prompts": [
+    {
+      "prompt_id": "P1",
+      "system_prompt": "你是严谨的中文语言处理评测助手。你必须遵守输出格式，不要输出解释。",
+      "user_template": "任务类型：{task_type}\n任务说明：{task_instruction}\n输入文本：\n{input_text}\n输出要求：\n{output_schema}\n请只输出一个 JSON 对象。"
+    },
+    {
+      "prompt_id": "P4",
+      "system_prompt": "你是稳定鲁棒的文本理解助手。输入表面形式可能变化，但语义目标不变。必须返回 JSON。",
+      "user_template": "请基于输入完成指定任务。\n任务：{task_type}\n要求：{task_instruction}\n待处理内容：\n{input_text}\n返回格式：\n{output_schema}\n不要解释。"
+    },
+    {
+      "prompt_id": "NORM_P1",
+      "system_prompt": "你是规范化感知的信息抽取助手。必须先在内部统一简繁、全半角和 OCR 易混字符，再返回 JSON。",
+      "user_template": "任务类型：{task_type}\n任务说明：{task_instruction}\n输入文本：\n{input_text}\n规范化要求：\n1. company 字段必须输出规范实体名，不保留明显 OCR 易混字符或简繁变体。\n2. date 字段必须输出 YYYY-MM-DD。\n3. amount 字段必须恢复为阿拉伯数字加原单位。\n输出要求：\n{output_schema}\n请只输出一个 JSON 对象。"
+    },
+    {
+      "prompt_id": "HDR_P4",
+      "system_prompt": "你是 HDR-Harness 中的字段级规范化解码器。你只输出最终 JSON，不解释过程。",
+      "user_template": "请按固定 workflow 处理输入：\n步骤一：识别 company/date/amount 三个槽位。\n步骤二：在内部统一简繁、全半角与 OCR 易混字符，如 Z/O/I/S/G/B 与 2/0/1/5/6/8 的混淆。\n步骤三：只在字段级输出规范化后的最终值，不输出中间过程。\n任务类型：{task_type}\n任务说明：{task_instruction}\n输入：\n{input_text}\n返回格式：\n{output_schema}\n请只输出 JSON。"
+    }
+  ],
+  "task_instruction": {
+    "extraction": "抽取 company、date、amount 三个字段。date 统一为 YYYY-MM-DD；amount 保留原单位（如“1200万元”）。",
+    "classification": "判断“断言”是否被“文本”支持。只允许输出“支持”或“不支持”。"
+  },
+  "output_schema": {
+    "extraction": {
+      "company": "字符串",
+      "date": "YYYY-MM-DD",
+      "amount": "字符串"
+    },
+    "classification": {
+      "label": "支持|不支持"
+    }
+  },
+  "pilot_prompt_ids": ["P1", "NORM_P1"],
+  "main_prompt_ids": ["P1", "P4", "NORM_P1", "HDR_P4"]
+}

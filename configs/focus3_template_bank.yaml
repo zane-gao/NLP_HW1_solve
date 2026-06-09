@@ -1,0 +1,76 @@
+{
+  "domains": [
+    {
+      "domain": "announcement",
+      "source_style": "doc",
+      "extraction_templates": [
+        "【融资公告】{company}于{date_cn}完成{amount}融资，内部编号{code}，资金主要用于{purpose}。",
+        "公司公告：{company}在{date_cn}披露完成{amount}融资（记录号 {code}），后续将重点投入{purpose}。"
+      ],
+      "classification_wrappers": [
+        "公告正文：\n{text}\n\n断言：{claim}\n请判断断言是否被材料支持，只输出“支持”或“不支持”。",
+        "材料如下：\n{text}\n\n待核验说法：{claim}\n回答：支持 或 不支持。"
+      ]
+    },
+    {
+      "domain": "customer_service",
+      "source_style": "chat",
+      "extraction_templates": [
+        "客服记录：用户问“{company}什么时候融资的？”客服答“{date_cn}，金额{amount}，工单号{code}，主要投向{purpose}。”",
+        "工单摘要：关于{company}融资信息，坐席确认“日期{date_cn}，金额{amount}，记录号{code}，用途是{purpose}”。"
+      ],
+      "classification_wrappers": [
+        "客服会话：\n{text}\n\n用户复述：{claim}\n请判断该复述是否被会话支持。",
+        "对话材料：\n{text}\n\n核验断言：{claim}\n仅输出“支持”或“不支持”。"
+      ]
+    },
+    {
+      "domain": "social_media",
+      "source_style": "social",
+      "extraction_templates": [
+        "社媒贴文：有人转发说“{company}在{date_cn}拿到{amount}融资”，评论区补充这笔资金会投向{purpose}，截图里还带着编号{code}。",
+        "热帖摘要：#{platform} 上有用户提到 {company} 于{date_cn}完成{amount}融资，后续预算将用于{purpose}，配图标注了{code}。"
+      ],
+      "classification_wrappers": [
+        "帖子内容：\n{text}\n\n网友总结：{claim}\n请判断总结是否被帖子支持。",
+        "原帖：\n{text}\n\n复述断言：{claim}\n只回答支持或不支持。"
+      ]
+    },
+    {
+      "domain": "email",
+      "source_style": "mail",
+      "extraction_templates": [
+        "邮件纪要：{company}已于{date_cn}完成{amount}融资（编号{code}），后续预算主要投向{purpose}。",
+        "To: 投资团队\n内容：确认 {company} 在{date_cn}完成{amount}融资，备案号{code}，这笔钱将用于{purpose}。"
+      ],
+      "classification_wrappers": [
+        "邮件正文：\n{text}\n\n待核验陈述：{claim}\n请输出支持或不支持。",
+        "邮件材料：\n{text}\n\n判断以下说法是否成立：{claim}\n只输出支持/不支持。"
+      ]
+    },
+    {
+      "domain": "im_chat",
+      "source_style": "chat",
+      "extraction_templates": [
+        "群聊记录：A说“{company}那笔融资落地了”，B回“时间{date_cn}，金额{amount}，单号{code}，主要用在{purpose}。”",
+        "IM 摘录：[{channel}] “{company} 已在{date_cn}完成{amount}融资，追踪号{code}，资金会投向{purpose}。”"
+      ],
+      "classification_wrappers": [
+        "群聊摘录：\n{text}\n\n待判断说法：{claim}\n请回答支持或不支持。",
+        "IM 文本：\n{text}\n\n断言：{claim}\n判断是否被文本支持。"
+      ]
+    },
+    {
+      "domain": "form_ocr",
+      "source_style": "form",
+      "extraction_templates": [
+        "OCR转写：公司={company}；日期={date_cn}；金额={amount}；编号={code}；备注=资金用于{purpose}。",
+        "扫描件识别结果：{company} | {date_cn} | {amount} | {code} | 资金用途={purpose}。"
+      ],
+      "classification_wrappers": [
+        "OCR 文本：\n{text}\n\n核验断言：{claim}\n请输出支持或不支持。",
+        "表单内容：\n{text}\n\n待验证陈述：{claim}\n只输出支持/不支持。"
+      ]
+    }
+  ]
+}

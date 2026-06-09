@@ -1,0 +1,27 @@
+{
+  "dataset": {
+    "pair_count_total": 120,
+    "rows_total": 240,
+    "task_ratio": {
+      "extraction_pairs": 80,
+      "classification_pairs": 40
+    },
+    "min_pairs_per_subtype": 10,
+    "human_semantic_check_ratio": 0.15
+  },
+  "pipeline": {
+    "pilot_pairs_per_subtype": 4,
+    "pilot_extraction_per_subtype": 3,
+    "pilot_classification_per_subtype": 1,
+    "pilot_models_required": 3,
+    "pilot_prompts_required": 2
+  },
+  "thresholds": {
+    "pilot_delta_err_pp": 10.0,
+    "pilot_semantic_pass_rate": 0.9,
+    "A_delta_err_pp": 15.0,
+    "A_p_value": 0.05,
+    "B_min_prompt_count": 3,
+    "C_min_model_count": 5
+  }
+}

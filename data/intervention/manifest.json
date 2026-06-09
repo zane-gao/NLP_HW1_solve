@@ -1,0 +1,42 @@
+{
+  "source_problem_bank": "data/problem_bank_focus3_main_extraction.jsonl",
+  "subtypes": [
+    "simp_trad",
+    "ocr_confusable",
+    "full_half_width"
+  ],
+  "pairs_per_subtype": 6,
+  "selected_pairs": [
+    "pair_main_ext_simp_trad_001",
+    "pair_main_ext_simp_trad_002",
+    "pair_main_ext_simp_trad_003",
+    "pair_main_ext_simp_trad_004",
+    "pair_main_ext_simp_trad_005",
+    "pair_main_ext_simp_trad_006",
+    "pair_main_ext_ocr_confusable_091",
+    "pair_main_ext_ocr_confusable_092",
+    "pair_main_ext_ocr_confusable_093",
+    "pair_main_ext_ocr_confusable_094",
+    "pair_main_ext_ocr_confusable_096",
+    "pair_main_ext_ocr_confusable_097",
+    "pair_main_ext_full_half_width_061",
+    "pair_main_ext_full_half_width_062",
+    "pair_main_ext_full_half_width_063",
+    "pair_main_ext_full_half_width_064",
+    "pair_main_ext_full_half_width_066",
+    "pair_main_ext_full_half_width_067"
+  ],
+  "conditions": [
+    "base",
+    "preprocess",
+    "harness"
+  ],
+  "models": [
+    "gpt-5.2",
+    "GLM-4.6"
+  ],
+  "prompts": [
+    "P1",
+    "P4"
+  ]
+}

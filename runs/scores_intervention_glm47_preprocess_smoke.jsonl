@@ -1,0 +1,8 @@
+{"qid": "pair_main_ext_simp_trad_001_control__preprocess", "model_id": "GLM-4.7", "prompt_id": "P1", "repair_mode": "none", "registry_scope": "none", "is_correct": 1, "error_type": "ok", "score_source": "rule_repaired"}
+{"qid": "pair_main_ext_simp_trad_001_perturbed__preprocess", "model_id": "GLM-4.7", "prompt_id": "P1", "repair_mode": "none", "registry_scope": "none", "is_correct": 1, "error_type": "ok", "score_source": "rule_repaired"}
+{"qid": "pair_main_ext_simp_trad_002_control__preprocess", "model_id": "GLM-4.7", "prompt_id": "P1", "repair_mode": "none", "registry_scope": "none", "is_correct": 1, "error_type": "ok", "score_source": "rule_repaired"}
+{"qid": "pair_main_ext_simp_trad_002_perturbed__preprocess", "model_id": "GLM-4.7", "prompt_id": "P1", "repair_mode": "none", "registry_scope": "none", "is_correct": 1, "error_type": "ok", "score_source": "rule_repaired"}
+{"qid": "pair_main_ext_simp_trad_001_control__preprocess", "model_id": "GLM-4.7", "prompt_id": "P4", "repair_mode": "none", "registry_scope": "none", "is_correct": 1, "error_type": "ok", "score_source": "rule_repaired"}
+{"qid": "pair_main_ext_simp_trad_001_perturbed__preprocess", "model_id": "GLM-4.7", "prompt_id": "P4", "repair_mode": "none", "registry_scope": "none", "is_correct": 1, "error_type": "ok", "score_source": "rule_repaired"}
+{"qid": "pair_main_ext_simp_trad_002_control__preprocess", "model_id": "GLM-4.7", "prompt_id": "P4", "repair_mode": "none", "registry_scope": "none", "is_correct": 1, "error_type": "ok", "score_source": "rule_repaired"}
+{"qid": "pair_main_ext_simp_trad_002_perturbed__preprocess", "model_id": "GLM-4.7", "prompt_id": "P4", "repair_mode": "none", "registry_scope": "none", "is_correct": 1, "error_type": "ok", "score_source": "rule_repaired"}

@@ -1,0 +1,168 @@
+{
+  "seed": 20260315,
+  "single_ratio": 0.9,
+  "composite_ratio": 0.1,
+  "intensity_ratio": {
+    "light": 0.5,
+    "medium": 0.3,
+    "hard": 0.2
+  },
+  "domains": [
+    "announcement",
+    "customer_service",
+    "social_media",
+    "email",
+    "im_chat",
+    "form_ocr"
+  ],
+  "main": {
+    "pair_total": 120,
+    "rows_total": 240,
+    "subtypes": [
+      {
+        "subtype_id": "simp_trad",
+        "pair_total": 60,
+        "extraction_pairs": 48,
+        "classification_pairs": 12,
+        "pairs_per_domain": 10,
+        "target_field_ratio": {
+          "company": 0.7,
+          "date": 0.15,
+          "amount": 0.15
+        }
+      },
+      {
+        "subtype_id": "full_half_width",
+        "pair_total": 30,
+        "extraction_pairs": 24,
+        "classification_pairs": 6,
+        "pairs_per_domain": 5,
+        "target_field_ratio": {
+          "company": 0.2,
+          "date": 0.4,
+          "amount": 0.4
+        }
+      },
+      {
+        "subtype_id": "ocr_confusable",
+        "pair_total": 30,
+        "extraction_pairs": 24,
+        "classification_pairs": 6,
+        "pairs_per_domain": 5,
+        "target_field_ratio": {
+          "company": 0.5,
+          "date": 0.25,
+          "amount": 0.25
+        }
+      }
+    ]
+  },
+  "calibration": {
+    "pair_total": 18,
+    "rows_total": 36,
+    "subtypes": [
+      {
+        "subtype_id": "simp_trad",
+        "pair_total": 6,
+        "extraction_pairs": 4,
+        "classification_pairs": 2,
+        "pairs_per_domain": 1,
+        "target_field_ratio": {
+          "company": 0.7,
+          "date": 0.15,
+          "amount": 0.15
+        }
+      },
+      {
+        "subtype_id": "full_half_width",
+        "pair_total": 6,
+        "extraction_pairs": 4,
+        "classification_pairs": 2,
+        "pairs_per_domain": 1,
+        "target_field_ratio": {
+          "company": 0.2,
+          "date": 0.4,
+          "amount": 0.4
+        }
+      },
+      {
+        "subtype_id": "ocr_confusable",
+        "pair_total": 6,
+        "extraction_pairs": 4,
+        "classification_pairs": 2,
+        "pairs_per_domain": 1,
+        "target_field_ratio": {
+          "company": 0.5,
+          "date": 0.25,
+          "amount": 0.25
+        }
+      }
+    ]
+  },
+  "noise_profile": {
+    "script_variant_map": {
+      "蓝": "藍",
+      "数": "數",
+      "据": "據",
+      "远": "遠",
+      "纪": "紀",
+      "华": "華",
+      "北": "北",
+      "网": "網",
+      "络": "絡",
+      "长": "長",
+      "风": "風",
+      "教": "教",
+      "育": "育",
+      "启": "啟",
+      "讯": "訊",
+      "资": "資",
+      "云": "雲",
+      "银": "銀",
+      "联": "聯",
+      "实": "實",
+      "验": "驗",
+      "记": "記",
+      "录": "錄",
+      "获": "獲",
+      "轮": "輪",
+      "后": "後",
+      "续": "續",
+      "将": "將",
+      "于": "於",
+      "这": "這",
+      "笔": "筆",
+      "转": "轉",
+      "写": "寫",
+      "单": "單",
+      "号": "號",
+      "总": "總",
+      "结": "結",
+      "发": "發",
+      "贴": "貼",
+      "话": "話",
+      "纪": "紀",
+      "录": "錄",
+      "要": "要",
+      "员": "員",
+      "术": "術",
+      "观": "觀",
+      "测": "測"
+    },
+    "ocr_confusable_map": {
+      "0": "O",
+      "1": "I",
+      "2": "Z",
+      "5": "S",
+      "6": "G",
+      "8": "B",
+      "O": "0",
+      "I": "1",
+      "Z": "2",
+      "S": "5",
+      "G": "6",
+      "B": "8",
+      "l": "1"
+    }
+  }
+}

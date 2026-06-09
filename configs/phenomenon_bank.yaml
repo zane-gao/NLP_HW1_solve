@@ -1,0 +1,61 @@
+{
+  "phenomenon_id": "semantic_equivalent_perturbation",
+  "description": "语义等价或近似等价的输入微扰会导致输出翻转或结构失稳。",
+  "subtypes": [
+    {
+      "subtype_id": "full_half_width",
+      "perturb_rule": "在不改变语义的前提下，将部分数字/字母在全角与半角间转换。",
+      "invariance_rule": "关键信息抽取结果与分类标签不应变化。"
+    },
+    {
+      "subtype_id": "punctuation_style",
+      "perturb_rule": "替换中英文标点样式（逗号、句号、冒号、分号等）。",
+      "invariance_rule": "任务输出保持一致。"
+    },
+    {
+      "subtype_id": "whitespace_newline",
+      "perturb_rule": "加入额外空格、换行或制表符，不改变词序和语义。",
+      "invariance_rule": "任务输出保持一致。"
+    },
+    {
+      "subtype_id": "zero_width_char",
+      "perturb_rule": "在局部位置插入零宽字符（如 U+200B）。",
+      "invariance_rule": "任务输出保持一致。"
+    },
+    {
+      "subtype_id": "ocr_confusable",
+      "perturb_rule": "注入常见 OCR 混淆字符（如 0/O、1/I）并保持语义意图不变。",
+      "invariance_rule": "任务输出保持一致。"
+    },
+    {
+      "subtype_id": "simp_trad",
+      "perturb_rule": "简繁体局部混排。",
+      "invariance_rule": "任务输出保持一致。"
+    },
+    {
+      "subtype_id": "quote_bracket_style",
+      "perturb_rule": "更换引号/书名号/括号样式。",
+      "invariance_rule": "任务输出保持一致。"
+    },
+    {
+      "subtype_id": "minor_typo",
+      "perturb_rule": "注入轻微错别字或近形字噪声，尽量不影响人类语义判断。",
+      "invariance_rule": "任务输出保持一致。"
+    },
+    {
+      "subtype_id": "markdown_wrap",
+      "perturb_rule": "加入 Markdown 包裹（列表、加粗、代码样式）。",
+      "invariance_rule": "任务输出保持一致。"
+    },
+    {
+      "subtype_id": "emoji_markdown_wrap",
+      "perturb_rule": "按 50/30/20 加入 emoji、Markdown 或叠加扰动。",
+      "invariance_rule": "任务输出保持一致。"
+    }
+  ],
+  "fallback_phenomenon": {
+    "phenomenon_id": "scope_negation_quantifier_exception",
+    "description": "否定、量词、例外条款作用域错误。",
+    "activation_rule": "当主现象未通过 A/B/C 强证据阈值时启用。"
+  }
+}

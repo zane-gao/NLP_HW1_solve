@@ -1,0 +1,4 @@
+check,actual_delta_pp,C_flag,pass
+simp_trad 修复后平均 delta_pp < 5 且 C 消失,1.9746,0,1
+SCCP 保持 simp_trad 消解,0.0000,0,1
+ocr_confusable 在严格 SCCP 后平均 delta_pp < 15 且 C 消失,14.3583,0,1

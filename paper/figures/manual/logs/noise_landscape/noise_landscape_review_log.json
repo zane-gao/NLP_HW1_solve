@@ -1,0 +1,32 @@
+{
+  "user_prompt": "publication-quality infographic, real-world Chinese noisy text landscape, six panels for announcement, customer service, social media, email memo, instant message chat, form OCR, each panel shows semantically equivalent but visually perturbed Chinese text examples, highlight simplified-traditional variants, full-width half-width mixing, OCR confusable characters, flat vector poster style, white background, clean grid layout, subtle blue orange accents, colorblind-safe palette, minimal labels\n\nHard constraints:\n- white background\n- publication-quality composition\n- keep labels minimal\n- do not include any text showing the prompt, instructions, metadata, layout descriptions, or style directives\n- avoid: watermark, photorealistic, 3d, dense paragraphs, decorative icons, prompt leakage, layout instruction text, low resolution, unrelated charts",
+  "infographic_type": "comparison",
+  "style": "education",
+  "palette": "wong",
+  "doc_type": "report",
+  "quality_threshold": 8.0,
+  "research_enabled": false,
+  "research_data": null,
+  "iterations": [
+    {
+      "iteration": 1,
+      "success": false,
+      "error": "API request failed: HTTPSConnectionPool(host='new.12ai.org', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
+    },
+    {
+      "iteration": 2,
+      "success": false,
+      "error": "API request failed: HTTPSConnectionPool(host='new.12ai.org', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
+    },
+    {
+      "iteration": 3,
+      "success": false,
+      "error": "API request failed: HTTPSConnectionPool(host='new.12ai.org', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
+    }
+  ],
+  "final_image": null,
+  "final_score": 0.0,
+  "success": false,
+  "early_stop": false,
+  "early_stop_reason": null
+}
